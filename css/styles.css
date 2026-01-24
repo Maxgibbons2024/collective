@@ -61,11 +61,14 @@ body {
 }
 
 .nav-logo {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--terracotta);
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    text-transform: lowercase;
+}
+
+.nav-logo img {
+    height: 35px;
+    width: auto;
 }
 
 .nav-links {
@@ -195,11 +198,16 @@ body {
     color: inherit;
     transition: transform var(--transition), box-shadow var(--transition);
     border: 1px solid rgba(0,0,0,0.06);
+    position: relative;
 }
 
 .villa-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.villa-card:hover .villa-image {
+    transform: scale(1.05);
 }
 
 .villa-image {
@@ -207,6 +215,7 @@ body {
     aspect-ratio: 4/3;
     object-fit: cover;
     background: var(--sand);
+    transition: transform 0.5s ease;
 }
 
 .villa-content {
