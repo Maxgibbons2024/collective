@@ -120,7 +120,14 @@
     <nav class="nav">
         <div class="nav-container">
             <a href="index.html" class="nav-logo"><img src="logo.svg" alt="Marbella Collective" style="height: 35px;"></a>
-            <div class="nav-links">
+            
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="nav-links">
                 <a href="index.html#villas">Villas</a>
                 <a href="index.html#services">Services</a>
                 <a href="for-owners.html">For Owners</a>
@@ -260,5 +267,21 @@
         </div>
     </footer>
 
+    <script>
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+        const navLinks = document.getElementById("nav-links");
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener("click", function() {
+                navLinks.classList.toggle("active");
+                mobileMenuBtn.classList.toggle("active");
+            });
+            document.querySelectorAll(".nav-links a").forEach(link => {
+                link.addEventListener("click", function() {
+                    navLinks.classList.remove("active");
+                    mobileMenuBtn.classList.remove("active");
+                });
+            });
+        }
+    </script>
 </body>
 </html>
