@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="List your quality villa with Marbella Collective. We handle bookings, guest services, and maximize your rental income.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <title>For Villa Owners — Marbella Collective</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        .hero-owners {
+            padding: 140px 30px 80px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .form-section {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 60px 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--charcoal);
+            margin-bottom: 8px;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 15px;
+            font-family: var(--font-sans);
+            border: 1px solid rgba(0,0,0,0.15);
+            border-radius: 8px;
+            background: white;
+            transition: border-color var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--terracotta);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 18px 32px;
+            background: var(--terracotta);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition);
+            margin-top: 20px;
+        }
+        
+        .submit-btn:hover {
+            background: #c2674b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 118, 78, 0.3);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .benefit {
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .benefit-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        
+        .benefit h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 12px;
+            color: var(--charcoal);
+        }
+        
+        .benefit p {
+            font-size: 15px;
+            color: var(--grey);
+            line-height: 1.7;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><img src="logo.png" alt="Marbella Collective" style="height: 35px;"></a>
+            <div class="nav-links">
+                <a href="index.html#villas">Villas</a>
+                <a href="index.html#services">Services</a>
+                <a href="for-owners.html">For Owners</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-owners">
+        <h1 class="hero-title">List Your Villa</h1>
+        <p class="hero-subtitle">
+            Have a quality villa in Marbella? We bring the guests, handle the service, and maximize your rental income.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Why Work With Us</h2>
+        
+        <div class="benefits-grid">
+            
+            <div class="benefit">
+                <div class="benefit-icon">👥</div>
+                <h3>More Bookings</h3>
+                <p>Our marketing and network bring quality guests to your villa year-round.</p>
+            </div>
+
+            <div class="benefit">
+                <div class="benefit-icon">🛎️</div>
+                <h3>Full Service Handled</h3>
+                <p>We manage guest communications, concierge requests, and all the details.</p>
+            </div>
+
+            <div class="benefit">
+                <div class="benefit-icon">⭐</div>
+                <h3>Quality Guests</h3>
+                <p>We work with groups celebrating special occasions—they take care of your property.</p>
+            </div>
+
+            <div class="benefit">
+                <div class="benefit-icon">💰</div>
+                <h3>Better Income</h3>
+                <p>Competitive commission rates. We maximize occupancy while protecting your villa.</p>
+            </div>
+
+            <div class="benefit">
+                <div class="benefit-icon">📸</div>
+                <h3>Professional Marketing</h3>
+                <p>Your villa featured on our website, Instagram, and partner networks.</p>
+            </div>
+
+            <div class="benefit">
+                <div class="benefit-icon">🤝</div>
+                <h3>Hands-Off Management</h3>
+                <p>We handle everything. You just collect the income.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="form-section">
+        <h2 style="font-family: var(--font-serif); font-size: 32px; font-weight: 400; margin-bottom: 16px; text-align: center;">Submit Your Villa</h2>
+        <p style="text-align: center; color: var(--grey); margin-bottom: 40px; font-size: 16px;">
+            Tell us about your property and we'll get back to you within 24 hours.
+        </p>
+
+        <form id="owner-form" action="https://formspree.io/f/mlgjagaw" method="POST">
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Villa Location *</label>
+                    <input type="text" id="location" name="location" placeholder="e.g., Golden Mile, Nueva Andalucía" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="bedrooms">Bedrooms *</label>
+                    <select id="bedrooms" name="bedrooms" required>
+                        <option value="">Select...</option>
+                        <option value="3">3 Bedrooms</option>
+                        <option value="4">4 Bedrooms</option>
+                        <option value="5">5 Bedrooms</option>
+                        <option value="6">6 Bedrooms</option>
+                        <option value="7+">7+ Bedrooms</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guests">Sleeps How Many? *</label>
+                    <input type="number" id="guests" name="guests" min="1" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="amenities">Key Amenities</label>
+                <input type="text" id="amenities" name="amenities" placeholder="e.g., Pool, Sea views, Jacuzzi, BBQ">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Tell Us About Your Villa</label>
+                <textarea id="message" name="message" placeholder="What makes your villa special? Any unique features? Current rental status?"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="photos">Villa Photos URL (optional)</label>
+                <input type="url" id="photos" name="photos" placeholder="Link to Dropbox, Google Drive, etc.">
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Your Villa</button>
+
+        </form>
+
+        <p style="text-align: center; margin-top: 30px; font-size: 14px; color: var(--light-grey);">
+            Or WhatsApp us directly: <a href="https://wa.me/34604497118" style="color: var(--terracotta); text-decoration: none;">+34 604 49 71 18</a>
+        </p>
+    </section>
+
+    <section class="section" style="background: var(--sand);">
+        <h2 class="section-title">What We Look For</h2>
+        <div style="max-width: 700px; margin: 0 auto; font-size: 16px; line-height: 1.8; color: var(--grey);">
+            <p style="margin-bottom: 20px;">We work with quality villas that offer great experiences for groups:</p>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.05);">✓ 3+ bedrooms (ideal for groups)</li>
+                <li style="padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.05);">✓ Pool and outdoor space</li>
+                <li style="padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.05);">✓ Well-maintained and clean</li>
+                <li style="padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.05);">✓ Good location in Marbella area</li>
+                <li style="padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.05);">✓ WiFi and modern amenities</li>
+                <li style="padding: 10px 0;">✓ Owner committed to quality guest experience</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Questions About Listing?</h2>
+        <p>Message us on WhatsApp or give us a call</p>
+        <div class="cta-group">
+            <a href="https://wa.me/34604497118?text=Hi, I'd like to list my villa" class="btn">💬 WhatsApp Us</a>
+            <a href="tel:+34604497118" class="btn">📞 +34 604 49 71 18</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <img src="logo.png" alt="Marbella Collective" style="height: 30px; margin-bottom: 12px;">
+                <p style="color: rgba(255,255,255,0.6); font-size: 14px; line-height: 1.7;">
+                    Quality villas + full concierge service in Marbella
+                </p>
+            </div>
+            <div>
+                <h4>Villas</h4>
+                <a href="villa-monterray.html">Villa Monterray</a>
+                <a href="villa-vanilla.html">Villa Vanilla</a>
+                <a href="villa-sierra.html">Villa Sierra</a>
+                <a href="villa-ampola.html">Villa Ampola</a>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <a href="https://wa.me/34604497118">WhatsApp</a>
+                <a href="tel:+34604497118">+34 604 49 71 18</a>
+                <a href="mailto:bookings@marbellacollective.co">bookings@marbellacollective.co</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Marbella Collective</p>
+        </div>
+    </footer>
+
+    <script>
+        // Form will submit to Formspree
+        // Formspree will handle the email and show confirmation
+    </script>
+
+</body>
+</html>
