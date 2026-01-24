@@ -1,0 +1,8 @@
+<svg width="280" height="60" viewBox="0 0 280 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- MC Circle -->
+  <circle cx="30" cy="30" r="28" fill="#D4764E"/>
+  <text x="30" y="30" font-family="Georgia, serif" font-size="18" font-weight="400" fill="white" text-anchor="middle" dominant-baseline="central">MC</text>
+  
+  <!-- Text -->
+  <text x="70" y="32" font-family="Georgia, serif" font-size="16" font-weight="400" fill="#2A2A2A" letter-spacing="0.5">MARBELLA COLLECTIVE</text>
+</svg>
