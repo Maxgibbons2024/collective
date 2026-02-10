@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itinerary Planner | Marbella Collective</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .planner-hero {
+            background: linear-gradient(135deg, #faf8f5 0%, #f5ede5 100%);
+            padding: 100px 20px 60px;
+            text-align: center;
+        }
+        
+        .planner-hero h1 {
+            font-size: 48px;
+            color: #2a2a2a;
+            margin-bottom: 16px;
+        }
+        
+        .planner-hero .price {
+            font-size: 36px;
+            color: #D4764E;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .planner-hero p {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        .payment-container {
+            max-width: 600px;
+            margin: -40px auto 80px;
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+        
+        .form-section {
+            display: none;
+        }
+        
+        .form-section.active {
+            display: block;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2a2a2a;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e8e6e2;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #D4764E;
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-group small {
+            display: block;
+            color: #999;
+            margin-top: 4px;
+            font-size: 14px;
+        }
+        
+        .btn-primary {
+            width: 100%;
+            padding: 18px;
+            background: #D4764E;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background: #c2674b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 118, 78, 0.3);
+        }
+        
+        .btn-primary:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+        
+        .benefits-list li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #666;
+        }
+        
+        .benefits-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #D4764E;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        .success-message {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .success-message h2 {
+            color: #2a2a2a;
+            margin-bottom: 16px;
+        }
+        
+        .success-message p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .payment-logos {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e8e6e2;
+        }
+        
+        .payment-logos span {
+            color: #999;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.svg" alt="Marbella Collective">
+                </a>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#villas">Villas</a></li>
+                <li><a href="index.html#concierge">Concierge</a></li>
+                <li><a href="for-owners.html">For Owners</a></li>
+                <li><a href="https://wa.me/34604497118" class="btn-contact">WhatsApp</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="planner-hero">
+        <h1>Bespoke Itinerary Planning</h1>
+        <div class="price">£19.99</div>
+        <p>Let us create a personalized day-by-day itinerary for your Marbella hen party. Restaurants, beach clubs, activities, and insider tips.</p>
+    </div>
+
+    <div class="payment-container">
+        <!-- Payment Section -->
+        <div id="payment-section" class="form-section active">
+            <h2 style="margin-bottom: 20px; color: #2a2a2a;">What You'll Get</h2>
+            <ul class="benefits-list">
+                <li>Personalized day-by-day itinerary</li>
+                <li>Restaurant recommendations with booking links</li>
+                <li>Beach club and venue suggestions</li>
+                <li>Activity ideas tailored to your group</li>
+                <li>Insider tips from locals</li>
+                <li>Delivery within 48 hours</li>
+            </ul>
+            
+            <button class="btn-primary" onclick="proceedToForm()">Pay £19.99 & Continue</button>
+            
+            <div class="payment-logos">
+                <span>💳</span>
+                <span>🔒</span>
+                <span>✓</span>
+            </div>
+            <p style="text-align: center; color: #999; font-size: 14px; margin-top: 12px;">
+                Secure payment powered by Stripe
+            </p>
+        </div>
+
+        <!-- Booking Form Section -->
+        <div id="form-section" class="form-section">
+            <h2 style="margin-bottom: 24px; color: #2a2a2a;">Tell Us About Your Trip</h2>
+            
+            <form id="itinerary-form" action="https://formspree.io/f/mlgjagaw" method="POST">
+                <input type="hidden" name="_subject" value="New Itinerary Booking - £19.99">
+                <input type="hidden" name="service" value="Itinerary Planner">
+                
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="arrival">Date of Arrival *</label>
+                    <input type="date" id="arrival" name="arrival_date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="departure">Date of Departure *</label>
+                    <input type="date" id="departure" name="departure_date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bride">Name of Bride-to-Be *</label>
+                    <input type="text" id="bride" name="bride_name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Location of Villa/Hotel *</label>
+                    <input type="text" id="location" name="accommodation" required placeholder="e.g. Villa Vanilla, Puente Romano Hotel">
+                </div>
+                
+                <div class="form-group">
+                    <label for="group-size">Group Size</label>
+                    <input type="number" id="group-size" name="group_size" min="1" placeholder="How many people?">
+                </div>
+                
+                <div class="form-group">
+                    <label for="requests">Specific Requests</label>
+                    <textarea id="requests" name="specific_requests" placeholder="Tell us about preferences, dietary requirements, activities you're interested in, vibe you're going for, etc."></textarea>
+                    <small>The more details you give us, the better we can tailor your itinerary!</small>
+                </div>
+                
+                <button type="submit" class="btn-primary">Submit Booking</button>
+            </form>
+        </div>
+
+        <!-- Success Message -->
+        <div id="success-section" class="form-section">
+            <div class="success-message">
+                <h2>✓ Payment Successful!</h2>
+                <p>Thank you for your booking. We'll create your personalized itinerary and send it to your email within 48 hours.</p>
+                <p style="margin-top: 20px;">
+                    <strong>Questions?</strong> WhatsApp us at 
+                    <a href="https://wa.me/34604497118" style="color: #D4764E;">+34 604 49 71 18</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>WhatsApp: <a href="https://wa.me/34604497118">+34 604 49 71 18</a></p>
+                <p>Email: <a href="mailto:bookings@marbellacollective.co">bookings@marbellacollective.co</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <p><a href="https://www.instagram.com/marbellacollective/" target="_blank">Instagram</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="index.html#villas">Our Villas</a></p>
+                <p><a href="for-owners.html">List Your Villa</a></p>
+                <p><a href="itinerary-planner.html">Itinerary Planner</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Marbella Collective. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('active');
+        });
+        
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
+            });
+        });
+
+        // Form flow
+        function proceedToForm() {
+            // In production, this would integrate with Stripe payment
+            // For now, we'll simulate payment success
+            
+            // Hide payment section
+            document.getElementById('payment-section').classList.remove('active');
+            
+            // Show form section
+            document.getElementById('form-section').classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Form submission
+        document.getElementById('itinerary-form').addEventListener('submit', function(e) {
+            // Form will submit to Formspree
+            // After successful submission, show success message
+            setTimeout(() => {
+                document.getElementById('form-section').classList.remove('active');
+                document.getElementById('success-section').classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

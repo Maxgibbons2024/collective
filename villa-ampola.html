@@ -72,6 +72,16 @@
             aspect-ratio: 4/3;
             object-fit: cover;
             border-radius: 8px;
+            transition: transform 0.4s ease;
+            cursor: pointer;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.02);
+        }
+        
+        .gallery img:last-child:nth-child(odd) {
+            grid-column: span 1;
         }
         
         .details-grid {
@@ -173,12 +183,13 @@
 
     <section class="section">
         <div class="gallery">
-            <img src="edited-photos/villa-exterior-01.jpg" alt="Exterior with pool">
-            <img src="edited-photos/outdoor-pool-01.jpg" alt="Pool area">
-            <img src="edited-photos/interior-living-02.jpg" alt="Living room">
-            <img src="edited-photos/bedroom-01.jpg" alt="Bedroom">
-            <img src="edited-photos/bedroom-03.jpg" alt="Bedroom 2">
-            <img src="edited-photos/material-bathroom-02.jpg" alt="Bathroom">
+            <img src="edited-photos/ampola-living-room.jpg" alt="Villa Ampola living room">
+            <img src="edited-photos/ampola-kitchen.jpg" alt="Villa Ampola kitchen">
+            <img src="edited-photos/ampola-bedroom.jpg" alt="Villa Ampola bedroom">
+            <img src="edited-photos/ampola-kitchen-detail.jpg" alt="Villa Ampola kitchen bar">
+            <img src="edited-photos/ampola-outdoor-kitchen.jpg" alt="Villa Ampola outdoor kitchen and BBQ">
+            <img src="edited-photos/ampola-entrance.jpg" alt="Villa Ampola entrance hall">
+            <img src="edited-photos/ampola-hallway.jpg" alt="Villa Ampola hallway">
         </div>
     </section>
 
